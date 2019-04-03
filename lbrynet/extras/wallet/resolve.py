@@ -80,7 +80,6 @@ class Resolver:
                 result['success'] = False
                 result['uri'] = str(parsed_uri)
 
-
         else:
             certificate = None
 
@@ -297,11 +296,6 @@ class Resolver:
         if start_position > upper_bound:
             raise IndexError("claim %i greater than max %i" % (start_position, upper_bound))
         return page_generator, upper_bound
-
-    @staticmethod
-    def add_canonical_url(result_dict, url):
-        if result_dict.get('canonical_url') is None:
-            result_dict['canonical_url'] = url
 
 
 # Format amount to be decimal encoded string
